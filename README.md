@@ -1,3 +1,8 @@
+This is a port of xv6-riscv operative system to the VisionFive 2 (VF2)
+RISC V board.
+It is based on https://github.com/mit-pdos/xv6-riscv and 
+https://github.com/michaelengel/xv6-vf2.
+
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
 Version 6 (v6).  xv6 loosely follows the structure and style of v6,
 but is implemented for a modern RISC-V multiprocessor using ANSI C.
