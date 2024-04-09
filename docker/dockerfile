@@ -20,10 +20,8 @@ RUN adduser user sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 WORKDIR /tmp
-RUN wget -O riscv64-elf-toolchain.tar.gz \
-    https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.03.01/riscv64-elf-ubuntu-22.04-gcc-nightly-2024.03.01-nightly.tar.gz
-RUN tar -xzvf riscv64-elf-toolchain.tar.gz --strip-components 1 && rsync -av . /usr/local/
-RUN rm riscv64-elf-toolchain.tar.gz
+RUN wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.03.01/riscv64-elf-ubuntu-22.04-gcc-nightly-2024.03.01-nightly.tar.gz | \ 
+    tar -xzvf --strip-components 1 && rsync -av . /usr/local/
 ENV TOOLPREFIX=/usr/local/bin/riscv64-unknown-elf-
 
 RUN git clone https://github.com/qemu/qemu && \
