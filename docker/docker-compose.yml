@@ -6,7 +6,7 @@ services:
     image: tollsimy/xv6-riscv-vf2:latest
     container_name: xv6-riscv-vf2
     restart: "no"
-    working_dir: "/home/user/"
+    working_dir: "/home/user/src"
     stdin_open: true
     tty: true
     entrypoint: /bin/bash
